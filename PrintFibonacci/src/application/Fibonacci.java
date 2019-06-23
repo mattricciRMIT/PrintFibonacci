@@ -4,6 +4,7 @@ public class Fibonacci
 {
 
     /**
+     * <h1> PrintFibonacci.run() </h1>
      * Calculates and returns a Fibonacci sequence 
      * 
      * <p>
@@ -36,9 +37,16 @@ public class Fibonacci
         /*
          * Build string
          */
+        int itemNo = 0;
         for(int item: fib)
         {
-            result += item + " ";
+            if (itemNo != 0 && itemNo % 10 == 0)
+            {
+                result += item + ",\n";
+            } else {
+                result += item + ", ";
+            }
+            itemNo++;
         }
         
         return result; // Return string sequence
